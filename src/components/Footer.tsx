@@ -1,8 +1,4 @@
-import {
-    FaGithub,
-    FaLinkedinIn,
-    FaTwitter,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -41,9 +37,9 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label="GitHub"
-                                className="text-xs text-gray-600 transition-colors hover:text-pink-500"
+                                className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition-colors hover:border-pink-500 hover:text-pink-500"
                             >
-                                GitHub
+                                <FaGithub className="text-sm" />
                             </a>
 
                             <a
@@ -51,9 +47,9 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label="Twitter"
-                                className="text-xs text-gray-600 transition-colors hover:text-pink-500"
+                                className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition-colors hover:border-pink-500 hover:text-pink-500"
                             >
-                                Twitter
+                                <FaTwitter className="text-sm" />
                             </a>
 
                             <a
@@ -61,9 +57,9 @@ const Footer = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label="LinkedIn"
-                                className="text-xs text-gray-600 transition-colors hover:text-pink-500"
+                                className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-600 transition-colors hover:border-pink-500 hover:text-pink-500"
                             >
-                                LinkedIn
+                                <FaLinkedinIn className="text-sm" />
                             </a>
                         </div>
                     </div>
