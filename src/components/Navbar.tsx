@@ -52,7 +52,6 @@ const Navbar = () => {
                     </span>
                 </a>
 
-
                 {/* Desktop navigation */}
                 <div className="hidden items-center gap-8 md:flex">
                     {navLinks.map((link) => (
@@ -104,16 +103,10 @@ const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
-
-
                     </div>
                 </div>
             )}
-
-
         </header>
-
-
     );
 };
 

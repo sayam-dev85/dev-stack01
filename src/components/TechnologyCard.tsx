@@ -3,9 +3,15 @@ import type { Technology } from "../types/technology";
 
 interface TechnologyCardProps {
     technology: Technology;
+    isAdded: boolean;
+    onAdd: (technology: Technology) => void;
 }
 
-const TechnologyCard = ({ technology }: TechnologyCardProps) => {
+const TechnologyCard = ({
+    technology,
+    isAdded,
+    onAdd,
+}: TechnologyCardProps) => {
     return (
         <article className="group flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             {/* Icon and badge */}
@@ -58,9 +64,14 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
             {/* Add button */}
             <button
                 type="button"
-                className="mt-5 w-full rounded-lg bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                disabled={isAdded}
+                onClick={() => onAdd(technology)}
+                className={`mt-5 w-full rounded-lg px-4 py-3 text-sm font-semibold transition-all duration-200 ${isAdded
+                        ? "cursor-not-allowed bg-gray-100 text-gray-400"
+                        : "bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 text-white shadow-sm hover:-translate-y-0.5 hover:shadow-md"
+                    }`}
             >
-                Add to Stack
+                {isAdded ? "✓ Added to Stack" : "Add to Stack"}
             </button>
         </article>
     );
